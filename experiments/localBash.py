@@ -1,18 +1,19 @@
 import subprocess
 import datetime
 
-seeds=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-algs=["PPO", "DQN"]
-envs=["CartPole", "Acrobot"]
-ts=[0.1, 0.2, 0.4, 0.6, 0.8, 0.10, 1.2]
-alphs=[0.01, 0.02, 0.005]
+seeds=[0, 1, 2, 3, 4] #, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+algs=[ "DQN"]
+envs=["CartPole"]#, "Acrobot"]
+#ts=[0.1, 0.2, 0.4, 0.6, 0.8, 1, 1.2]
+ts=[1]
+alphs=[0.1, 0.02, 0.005]
 
 for seed in seeds:
     for alg in algs:
         for env in envs:
             for t in ts:
                 for alph in alphs:
-                    path = f"./results"
+                    path = f"./results2"
 
                     # Build the command to run experiment.py
                     command = [

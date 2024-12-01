@@ -31,6 +31,7 @@ class RewardCallback(BaseCallback):
         self.steps_rewards = []
         self.done_status = []
 
+        self.total_timesteps = total_timesteps/delta_t
         self.progress_bar = None
         self.steps_completed = 0
     
